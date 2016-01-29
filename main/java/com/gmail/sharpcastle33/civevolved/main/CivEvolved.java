@@ -1,8 +1,22 @@
 package com.gmail.sharpcastle33.civevolved.main;
 
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCoalOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCopperOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockDiamondOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockEmeraldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockIronOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLapisOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLeadOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 
 @Mod(modid = CivEvolved.MODID, version = CivEvolved.VERSION)
 public class CivEvolved {
@@ -14,6 +28,43 @@ public class CivEvolved {
 	//+======+
 	//|BLOCKS|
 	//+======+
+    
+    //ore
+    public static Block coalOre;
+    public static Block copperOre;
+    public static Block diamondOre;
+    public static Block emeraldOre;
+    public static Block goldOre;
+    public static Block ironOre;
+    public static Block lapisOre;
+    public static Block leadOre;
+    public static Block redstoneOre;
+    public static Block silverOre;
+    public static Block tinOre;
+    //poor ore
+    public static Block coalPoorOre;
+    public static Block copperPoorOre;
+    public static Block diamondPoorOre;
+    public static Block emeraldPoorOre;
+    public static Block goldPoorOre;
+    public static Block ironPoorOre;
+    public static Block lapisPoorOre;
+    public static Block leadPoorOre;
+    public static Block redstonePoorOre;
+    public static Block silverPoorOre;
+    public static Block tinPoorOre;
+    //good ore
+    public static Block coalGoodOre;
+    public static Block copperGoodOre;
+    public static Block diamondGoodOre;
+    public static Block emeraldGoodOre;
+    public static Block goldGoodOre;
+    public static Block ironGoodOre;
+    public static Block lapisGoodOre;
+    public static Block leadGoodOre;
+    public static Block redstoneGoodOre;
+    public static Block silverGoodOre;
+    public static Block tinGoodOre;
    
     
     
@@ -32,10 +83,47 @@ public class CivEvolved {
     }
     //register blocks to GameRegistry
     public void registerBlocks(){
-    	
+    	registerOres();
     }
     //register items to GameRegistry
     public void registerItems(){
     	
+    }
+    
+    public void registerOres(){
+    	System.out.println("Registering ores...");
+    	
+    	coalOre = new BlockCoalOre();
+    	GameRegistry.registerBlock(coalOre, "coalOre");
+    	
+    	copperOre = new BlockCopperOre();
+    	GameRegistry.registerBlock(copperOre, "copperOre");
+    	
+    	diamondOre = new BlockDiamondOre();
+    	GameRegistry.registerBlock(diamondOre, "diamondOre");
+    	
+    	emeraldOre = new BlockEmeraldOre();
+    	GameRegistry.registerBlock(emeraldOre, "emeraldOre");
+    	
+    	ironOre = new BlockIronOre();
+    	GameRegistry.registerBlock(ironOre, "ironOre");
+    	
+    	goldOre = new BlockGoldOre();
+    	GameRegistry.registerBlock(goldOre, "goldOre");
+    	
+    	lapisOre = new BlockLapisOre();
+    	GameRegistry.registerBlock(lapisOre, "lapisOre");
+    	
+    	leadOre = new BlockLeadOre();
+    	GameRegistry.registerBlock(leadOre, "leadOre");
+    	
+    	redstoneOre = new BlockRedstoneOre();
+    	GameRegistry.registerBlock(redstoneOre, "redstoneOre");
+    	
+    	silverOre = new BlockSilverOre();
+    	GameRegistry.registerBlock(silverOre, "silverOre");
+    	
+    	tinOre = new BlockTinOre();
+    	GameRegistry.registerBlock(tinOre, "tinOre");
     }
 }
