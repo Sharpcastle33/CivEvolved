@@ -17,6 +17,8 @@ public class BlockIronOre extends Block{
 	//|CONSTRUCTOR|
 	//+===========+
 	
+	//.
+	
 	public BlockIronOre(){
 		super(Material.rock);
 		//basics
