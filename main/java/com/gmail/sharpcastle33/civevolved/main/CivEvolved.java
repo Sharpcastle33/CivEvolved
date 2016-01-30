@@ -33,12 +33,16 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.items.ItemIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.ItemLargeIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.ItemSmallIronChunk;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 
 @Mod(modid = CivEvolved.MODID, version = CivEvolved.VERSION)
 public class CivEvolved {
@@ -94,6 +98,11 @@ public class CivEvolved {
 	//|ITEMS|
 	//+=====+
     
+    //ore chunks
+    public static Item ironChunk;
+    public static Item ironSmallChunk;
+    public static Item ironLargeChunk;
+    
     @EventHandler //loading event
     public void init(FMLInitializationEvent event)
     {
@@ -109,7 +118,20 @@ public class CivEvolved {
     }
     //register items to GameRegistry
     public void registerItems(){
+    	registerChunks();
+    }
+    
+    public void registerChunks(){
+    	System.out.println("Registering chunk items...");
     	
+    	ironChunk = new ItemIronChunk();
+    	GameRegistry.registerItem(ironChunk, "ironChunk");
+    	
+    	ironSmallChunk = new ItemLargeIronChunk();
+    	GameRegistry.registerItem(ironLargeChunk, "ironLargeChunk");
+    	
+    	ironLargeChunk = new ItemSmallIronChunk();
+    	GameRegistry.registerItem(ironSmallChunk, "ironSmallChunk");
     }
     
     public void registerOres(){
