@@ -127,10 +127,10 @@ public class CivEvolved {
     	ironChunk = new ItemIronChunk();
     	GameRegistry.registerItem(ironChunk, "ironChunk");
     	
-    	ironSmallChunk = new ItemLargeIronChunk();
+    	ironLargeChunk = new ItemLargeIronChunk();
     	GameRegistry.registerItem(ironLargeChunk, "ironLargeChunk");
     	
-    	ironLargeChunk = new ItemSmallIronChunk();
+    	ironSmallChunk = new ItemSmallIronChunk();
     	GameRegistry.registerItem(ironSmallChunk, "ironSmallChunk");
     }
     
