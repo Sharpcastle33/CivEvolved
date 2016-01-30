@@ -37,6 +37,7 @@ import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -59,7 +60,7 @@ public class CivEvolved {
     //+=============+
     //|CREATIVE TABS|
     //+=============+
-    public static CreativeTabs oreTab = new TabOres("CivEvolved: Ores");
+    public static CreativeTabs oreTab = new TabOres("oreTab");
 	//+======+
 	//|BLOCKS|
 	//+======+
@@ -111,14 +112,16 @@ public class CivEvolved {
     public static Item ironChunk;
     public static Item ironSmallChunk;
     public static Item ironLargeChunk;
+    //wooden tools
+    public static Item woodClub;
+    
     
     //+==============+
     //|TOOL MATERIALS|
     //+==============+
     
     //wooden
-    public static ToolMaterial WOODEN_CLUB = EnumHelper.addToolMaterial("WOODEN_CLUB", 0, 30, 1, 2, 0);
-    
+    public static ToolMaterial WOODEN_CLUB = EnumHelper.addToolMaterial("WOODEN_CLUB", 0, 30, 1.0F, 0.0F, 0);
     @EventHandler //loading event
     public void init(FMLInitializationEvent event)
     {
@@ -135,6 +138,12 @@ public class CivEvolved {
     //register items to GameRegistry
     public void registerItems(){
     	registerChunks();
+    	registerTools();
+    }
+    
+    public void registerTools(){
+    	woodClub = new ItemWoodClub();
+    	GameRegistry.registerItem(woodClub,"woodClub");
     }
     
     public void registerChunks(){

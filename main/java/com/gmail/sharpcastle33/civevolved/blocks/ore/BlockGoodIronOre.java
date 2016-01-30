@@ -22,7 +22,7 @@ public class BlockGoodIronOre extends Block{
 		//basics
 		this.setBlockName("civevolved_ironGoodOreBlock");
 		this.setBlockTextureName("civevolved:ironGoodOreBlock");
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(CivEvolved.oreTab);
 		//hardness and harvest level
 		this.setHardness(6.0f);
 		this.setHarvestLevel("pickaxe", 1);
