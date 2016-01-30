@@ -33,6 +33,7 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
@@ -42,7 +43,10 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = CivEvolved.MODID, version = CivEvolved.VERSION)
 public class CivEvolved {
@@ -51,6 +55,11 @@ public class CivEvolved {
 	//+======+
     public static final String MODID = "civevolved";
     public static final String VERSION = "1.0";
+    
+    //+=============+
+    //|CREATIVE TABS|
+    //+=============+
+    public static CreativeTabs oreTab = new TabOres("CivEvolved: Ores");
 	//+======+
 	//|BLOCKS|
 	//+======+
@@ -102,6 +111,13 @@ public class CivEvolved {
     public static Item ironChunk;
     public static Item ironSmallChunk;
     public static Item ironLargeChunk;
+    
+    //+==============+
+    //|TOOL MATERIALS|
+    //+==============+
+    
+    //wooden
+    public static ToolMaterial WOODEN_CLUB = EnumHelper.addToolMaterial("WOODEN_CLUB", 0, 30, 1, 2, 0);
     
     @EventHandler //loading event
     public void init(FMLInitializationEvent event)
