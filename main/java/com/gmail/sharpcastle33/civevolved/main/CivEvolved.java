@@ -5,9 +5,31 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCopperOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockDiamondOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockEmeraldOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodCoalOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodCopperOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodDiamondOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodEmeraldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodGoldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodIronOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodLapisOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodLeadOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodRedstoneOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodSilverOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockIronOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLapisOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLeadOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorCoalOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorCopperOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorDiamondOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorEmeraldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorGoldOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorIronOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorLapisOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorLeadOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorRedstoneOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorSilverOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
@@ -125,5 +147,75 @@ public class CivEvolved {
     	
     	tinOre = new BlockTinOre();
     	GameRegistry.registerBlock(tinOre, "tinOre");
+    	
+    	//poor ores
+    	
+    	coalPoorOre = new BlockPoorCoalOre();
+    	GameRegistry.registerBlock(coalPoorOre, "coalPoorOre");
+    	
+    	copperPoorOre = new BlockPoorCopperOre();
+    	GameRegistry.registerBlock(copperPoorOre, "copperPoorOre");
+    	
+    	diamondPoorOre = new BlockPoorDiamondOre();
+    	GameRegistry.registerBlock(diamondPoorOre, "diamondPoorOre");
+    	
+    	emeraldPoorOre = new BlockPoorEmeraldOre();
+    	GameRegistry.registerBlock(emeraldPoorOre, "emeraldPoorOre");
+    	
+    	ironPoorOre = new BlockPoorIronOre();
+    	GameRegistry.registerBlock(ironPoorOre, "ironPoorOre");
+    	
+    	goldPoorOre = new BlockPoorGoldOre();
+    	GameRegistry.registerBlock(goldPoorOre, "goldPoorOre");
+    	
+    	lapisPoorOre = new BlockPoorLapisOre();
+    	GameRegistry.registerBlock(lapisPoorOre, "lapisPoorOre");
+    	
+    	leadPoorOre = new BlockPoorLeadOre();
+    	GameRegistry.registerBlock(leadPoorOre, "leadPoorOre");
+    	
+    	redstonePoorOre = new BlockPoorRedstoneOre();
+    	GameRegistry.registerBlock(redstonePoorOre, "redstonePoorOre");
+    	
+    	silverPoorOre = new BlockPoorSilverOre();
+    	GameRegistry.registerBlock(silverPoorOre, "silverPoorOre");
+    	
+    	tinPoorOre = new BlockPoorTinOre();
+    	GameRegistry.registerBlock(tinPoorOre, "tinPoorOre");
+    	
+    	//good ores
+    	
+    	coalGoodOre = new BlockGoodCoalOre();
+    	GameRegistry.registerBlock(coalGoodOre, "coalGoodOre");
+    	
+    	copperGoodOre = new BlockGoodCopperOre();
+    	GameRegistry.registerBlock(copperGoodOre, "copperGoodOre");
+    	
+    	diamondGoodOre = new BlockGoodDiamondOre();
+    	GameRegistry.registerBlock(diamondGoodOre, "diamondGoodOre");
+    	
+    	emeraldGoodOre = new BlockGoodEmeraldOre();
+    	GameRegistry.registerBlock(emeraldGoodOre, "emeraldGoodOre");
+    	
+    	ironGoodOre = new BlockGoodIronOre();
+    	GameRegistry.registerBlock(ironGoodOre, "ironGoodOre");
+    	
+    	goldGoodOre = new BlockGoodGoldOre();
+    	GameRegistry.registerBlock(goldGoodOre, "goldGoodOre");
+    	
+    	lapisGoodOre = new BlockGoodLapisOre();
+    	GameRegistry.registerBlock(lapisGoodOre, "lapisGoodOre");
+    	
+    	leadGoodOre = new BlockGoodLeadOre();
+    	GameRegistry.registerBlock(leadGoodOre, "leadGoodOre");
+    	
+    	redstoneGoodOre = new BlockGoodRedstoneOre();
+    	GameRegistry.registerBlock(redstoneGoodOre, "redstoneGoodOre");
+    	
+    	silverGoodOre = new BlockGoodSilverOre();
+    	GameRegistry.registerBlock(silverGoodOre, "silverGoodOre");
+    	
+    	tinGoodOre = new BlockGoodTinOre();
+    	GameRegistry.registerBlock(tinGoodOre, "tinGoodOre");
     }
 }
