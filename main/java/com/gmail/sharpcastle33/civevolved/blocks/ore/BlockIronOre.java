@@ -1,13 +1,15 @@
 package com.gmail.sharpcastle33.civevolved.blocks.ore;
 
-import java.util.Random;
+import java.util.ArrayList;
 
 import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
+import com.gmail.sharpcastle33.civevolved.util.Util;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class BlockIronOre extends Block{
 
@@ -26,15 +28,13 @@ public class BlockIronOre extends Block{
 		this.setHarvestLevel("pickaxe", 1);
 	
 	}
-	
-	public Item getItemDropped(int meta, Random random, int fortune){
-		return CivEvolved.ironChunk;
-	}
-	
-	public int damageDropped(int metadata){
-		return 0;
-	}
-	public int quantityDropped(int meta, int fortune, Random random){
-		return 1;
+
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune){
+		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+		drops.add(new ItemStack(CivEvolved.ironChunk,1));
+		if(Util.chance(90)){
+			drops.add(new ItemStack(CivEvolved.ironSmallChunk));
+		}
+		return drops;
 	}
 }
