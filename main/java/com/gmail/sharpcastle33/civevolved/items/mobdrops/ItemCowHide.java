@@ -1,4 +1,4 @@
-package com.gmail.sharpcastle33.civevolved.items.tools.types;
+package com.gmail.sharpcastle33.civevolved.items.mobdrops;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

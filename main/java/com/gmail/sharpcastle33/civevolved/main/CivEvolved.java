@@ -37,7 +37,7 @@ import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
-import com.gmail.sharpcastle33.civevolved.items.tools.types.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
 import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
