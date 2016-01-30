@@ -33,9 +33,9 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
-import com.gmail.sharpcastle33.civevolved.items.ItemIronChunk;
-import com.gmail.sharpcastle33.civevolved.items.ItemLargeIronChunk;
-import com.gmail.sharpcastle33.civevolved.items.ItemSmallIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

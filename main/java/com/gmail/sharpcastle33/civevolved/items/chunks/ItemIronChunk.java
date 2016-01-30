@@ -1,4 +1,4 @@
-package com.gmail.sharpcastle33.civevolved.items;
+package com.gmail.sharpcastle33.civevolved.items.chunks;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
