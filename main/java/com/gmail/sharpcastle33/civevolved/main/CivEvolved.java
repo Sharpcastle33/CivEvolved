@@ -1,5 +1,6 @@
 package com.gmail.sharpcastle33.civevolved.main;
 
+import com.gmail.contactaquadude27.civevolved.utils.Reference;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCoalOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCopperOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockDiamondOre;
@@ -44,13 +45,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-@Mod(modid = CivEvolved.MODID, version = CivEvolved.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class CivEvolved {
-	//+======+
-	//|MOD ID|
-	//+======+
-    public static final String MODID = "civevolved";
-    public static final String VERSION = "1.0";
 	//+======+
 	//|BLOCKS|
 	//+======+
@@ -101,7 +97,7 @@ public class CivEvolved {
     //ore chunks
     public static Item ironChunk;
     public static Item ironSmallChunk;
-    public static Item ironLargeChunk;
+    public static Item ironLargeChunk;  
     
     @EventHandler //loading event
     public void init(FMLInitializationEvent event)
