@@ -37,6 +37,7 @@ import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.tools.types.ItemCowHide;
 import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
@@ -114,6 +115,8 @@ public class CivEvolved {
     public static Item ironLargeChunk;
     //wooden tools
     public static Item woodClub;
+    //mob drops
+    public static Item cowHide;
     
     
     //+==============+
@@ -139,6 +142,12 @@ public class CivEvolved {
     public void registerItems(){
     	registerChunks();
     	registerTools();
+    	registerMobDrops();
+    }
+    
+    public void registerMobDrops(){
+    	cowHide = new ItemCowHide();
+    	GameRegistry.registerItem(cowHide, "cowHide");
     }
     
     public void registerTools(){
