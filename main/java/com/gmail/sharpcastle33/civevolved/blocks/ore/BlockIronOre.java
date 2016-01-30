@@ -32,7 +32,7 @@ public class BlockIronOre extends Block{
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune){
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		drops.add(new ItemStack(CivEvolved.ironChunk,1));
-		if(Util.chance(90)){
+		if(Util.chance(10)){
 			drops.add(new ItemStack(CivEvolved.ironSmallChunk));
 		}
 		return drops;
