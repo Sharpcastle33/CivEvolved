@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 public class ItemSmallIronChunk extends Item{
 
 	public ItemSmallIronChunk(){
-		this.setUnlocalizedName("civevolved_ironChunk");
+		this.setUnlocalizedName("civevolved_ironSmallChunk");
 		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setTextureName("civevolved:ironChunk");
+		this.setTextureName("civevolved:ironSmallChunk");
 	}
 	
 }
