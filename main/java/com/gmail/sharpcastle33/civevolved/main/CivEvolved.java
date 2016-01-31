@@ -34,20 +34,39 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
+import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class CivEvolved {
 	//+======+
+<<<<<<< HEAD
+=======
+	//|MOD ID|
+	//+======+
+    public static final String MODID = "civevolved";
+    public static final String VERSION = "1.0";
+    
+    //+=============+
+    //|CREATIVE TABS|
+    //+=============+
+    public static CreativeTabs oreTab = new TabOres("oreTab");
+	//+======+
+>>>>>>> origin/master
 	//|BLOCKS|
 	//+======+
     
@@ -97,8 +116,23 @@ public class CivEvolved {
     //ore chunks
     public static Item ironChunk;
     public static Item ironSmallChunk;
+<<<<<<< HEAD
     public static Item ironLargeChunk;  
+=======
+    public static Item ironLargeChunk;
+    //wooden tools
+    public static Item woodClub;
+    //mob drops
+    public static Item cowHide;
     
+>>>>>>> origin/master
+    
+    //+==============+
+    //|TOOL MATERIALS|
+    //+==============+
+    
+    //wooden
+    public static ToolMaterial WOODEN_CLUB = EnumHelper.addToolMaterial("WOODEN_CLUB", 0, 30, 1.0F, 0.0F, 0);
     @EventHandler //loading event
     public void init(FMLInitializationEvent event)
     {
@@ -115,6 +149,18 @@ public class CivEvolved {
     //register items to GameRegistry
     public void registerItems(){
     	registerChunks();
+    	registerTools();
+    	registerMobDrops();
+    }
+    
+    public void registerMobDrops(){
+    	cowHide = new ItemCowHide();
+    	GameRegistry.registerItem(cowHide, "cowHide");
+    }
+    
+    public void registerTools(){
+    	woodClub = new ItemWoodClub();
+    	GameRegistry.registerItem(woodClub,"woodClub");
     }
     
     public void registerChunks(){
@@ -123,10 +169,10 @@ public class CivEvolved {
     	ironChunk = new ItemIronChunk();
     	GameRegistry.registerItem(ironChunk, "ironChunk");
     	
-    	ironSmallChunk = new ItemLargeIronChunk();
+    	ironLargeChunk = new ItemLargeIronChunk();
     	GameRegistry.registerItem(ironLargeChunk, "ironLargeChunk");
     	
-    	ironLargeChunk = new ItemSmallIronChunk();
+    	ironSmallChunk = new ItemSmallIronChunk();
     	GameRegistry.registerItem(ironSmallChunk, "ironSmallChunk");
     }
     
