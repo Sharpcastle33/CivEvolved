@@ -3,7 +3,6 @@ package com.gmail.sharpcastle33.civevolved.items.tools.types;
 import java.util.Set;
 
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemTool;
 
 public class ItemClub extends ItemTool{

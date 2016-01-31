@@ -1,6 +1,5 @@
 package com.gmail.sharpcastle33.civevolved.items.tools.wood;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

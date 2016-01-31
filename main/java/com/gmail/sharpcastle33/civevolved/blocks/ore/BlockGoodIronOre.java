@@ -7,7 +7,6 @@ import com.gmail.sharpcastle33.civevolved.util.Util;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
