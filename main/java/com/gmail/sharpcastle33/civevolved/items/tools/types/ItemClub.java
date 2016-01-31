@@ -12,9 +12,6 @@ public class ItemClub extends ItemTool{
 
 	public ItemClub(float p_i45333_1_, ToolMaterial mat, Set blocks) {
 		super(2F, mat, blocks);
-		this.setUnlocalizedName("civevolved_woodClub");
-		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName("civevolved:woodClub");
 		
 		//this.setMaxDamage(2F);
 		// TODO Auto-generated constructor stub
