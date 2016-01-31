@@ -4,11 +4,11 @@ import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 
 import net.minecraft.item.Item;
 
-public class ItemTanningOil extends Item {
+public class ItemArmorPadding extends Item {
 
-	public ItemTanningOil(){
-		this.setUnlocalizedName("civevolved_tanningOil");
+	public ItemArmorPadding(){
+		this.setUnlocalizedName("civevolved_armorPadding");
 		this.setCreativeTab(CivEvolved.tanningTab);
-		this.setTextureName("civevolved:tanningOil");
+		this.setTextureName("civevolved:armorPadding");
 	}
 }

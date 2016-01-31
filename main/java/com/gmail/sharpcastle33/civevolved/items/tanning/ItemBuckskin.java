@@ -5,11 +5,11 @@ import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ItemTannedLeather extends Item {
+public class ItemBuckskin extends Item {
 
-	public ItemTannedLeather(){
-		this.setUnlocalizedName("civevolved_tannedLeather");
+	public ItemBuckskin(){
+		this.setUnlocalizedName("civevolved_buckskin");
 		this.setCreativeTab(CivEvolved.tanningTab);
-		this.setTextureName("civevolved:tannedLeather");
+		this.setTextureName("civevolved:buckskin");
 	}
 }

@@ -1,5 +1,6 @@
 package com.gmail.sharpcastle33.civevolved.main;
 
+import com.gmail.contactaquadude27.civevolved.tools.Materials;
 import com.gmail.contactaquadude27.civevolved.utils.Reference;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCoalOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCopperOre;
@@ -34,11 +35,19 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabMobDrops;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabTanning;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemArmorPadding;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemBuckskin;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHandle;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTannedLeather;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTanningOil;
 import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
@@ -49,6 +58,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
@@ -64,6 +74,9 @@ public class CivEvolved {
     //|CREATIVE TABS|
     //+=============+
     public static CreativeTabs oreTab = new TabOres("oreTab");
+    public static CreativeTabs tanningTab = new TabTanning("tanningTab");
+    public static CreativeTabs mobDropsTab = new TabMobDrops("mobDropsTab");
+
 	
     //+======+
 	//|BLOCKS|
@@ -121,6 +134,14 @@ public class CivEvolved {
     public static Item woodClub;
     //mob drops
     public static Item cowHide;
+    //tanning tree
+    public static Item hide;
+    public static Item tanningOil;
+    public static Item tannedLeather;
+    public static Item buckskin;
+    public static Item armorPadding;
+    public static Item handle;
+    
     
     
     //+==============+
@@ -137,6 +158,7 @@ public class CivEvolved {
         registerBlocks();
         System.out.println("Registering Items...");
         registerItems();
+        registerRecipes();
     }
     //register blocks to GameRegistry
     public void registerBlocks(){
@@ -147,6 +169,39 @@ public class CivEvolved {
     	registerChunks();
     	registerTools();
     	registerMobDrops();
+    	registerTanningItems();
+    	Materials.registerItems();
+    }
+    
+    public void registerRecipes(){
+    	registerTanningRecipes();
+    }
+    
+    public void registerTanningRecipes(){
+    	GameRegistry.addShapelessRecipe(new ItemStack(this.hide,4), new Object[]
+    	{
+    		this.cowHide, Materials.flintKnife	
+    	});
+    }
+    
+    public void registerTanningItems(){
+    	hide = new ItemHide();
+    	GameRegistry.registerItem(hide, "hide");
+    	
+    	tannedLeather = new ItemTannedLeather();
+    	GameRegistry.registerItem(tannedLeather, "tannedLeather");
+    	
+    	tanningOil = new ItemTanningOil();
+    	GameRegistry.registerItem(tanningOil, "tanningOil");
+    	
+    	buckskin = new ItemBuckskin();
+    	GameRegistry.registerItem(buckskin, "buckskin");
+    	
+    	armorPadding = new ItemArmorPadding();
+    	GameRegistry.registerItem(armorPadding, "armorPadding");
+    	
+    	handle = new ItemHandle();
+    	GameRegistry.registerItem(handle, "handle");
     }
     
     public void registerMobDrops(){
