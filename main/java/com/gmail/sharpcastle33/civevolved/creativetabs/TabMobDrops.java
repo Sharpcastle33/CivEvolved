@@ -7,14 +7,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class TabTanning extends CreativeTabs{
+public class TabMobDrops extends CreativeTabs{
 
-	public TabTanning(int i, String s) {
+	public TabMobDrops(int i, String s) {
 		super(i, s);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public TabTanning(String s){
+	public TabMobDrops(String s){
 		super(s);
 	}
 
@@ -22,7 +22,7 @@ public class TabTanning extends CreativeTabs{
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 		// TODO Auto-generated method stub
-		return CivEvolved.hide;
+		return CivEvolved.cowHide;
 	}
 
 }

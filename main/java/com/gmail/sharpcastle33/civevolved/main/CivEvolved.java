@@ -35,12 +35,16 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabMobDrops;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
+import com.gmail.sharpcastle33.civevolved.creativetabs.TabTanning;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemArmorPadding;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemBuckskin;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHandle;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHide;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTannedLeather;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTanningOil;
@@ -70,6 +74,9 @@ public class CivEvolved {
     //|CREATIVE TABS|
     //+=============+
     public static CreativeTabs oreTab = new TabOres("oreTab");
+    public static CreativeTabs tanningTab = new TabTanning("tanningTab");
+    public static CreativeTabs mobDropsTab = new TabMobDrops("mobDropsTab");
+
 	
     //+======+
 	//|BLOCKS|
@@ -132,6 +139,8 @@ public class CivEvolved {
     public static Item tanningOil;
     public static Item tannedLeather;
     public static Item buckskin;
+    public static Item armorPadding;
+    public static Item handle;
     
     
     
@@ -187,6 +196,12 @@ public class CivEvolved {
     	
     	buckskin = new ItemBuckskin();
     	GameRegistry.registerItem(buckskin, "buckskin");
+    	
+    	armorPadding = new ItemArmorPadding();
+    	GameRegistry.registerItem(armorPadding, "armorPadding");
+    	
+    	handle = new ItemHandle();
+    	GameRegistry.registerItem(handle, "handle");
     }
     
     public void registerMobDrops(){
