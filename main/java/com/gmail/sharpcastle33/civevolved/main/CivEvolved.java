@@ -167,7 +167,7 @@ public class CivEvolved {
     }
     
     public void registerTanningRecipes(){
-    	GameRegistry.addShapelessRecipe(new ItemStack(this.hide,1), new Object[]
+    	GameRegistry.addShapelessRecipe(new ItemStack(this.hide,4), new Object[]
     	{
     		this.cowHide, Materials.flintKnife	
     	});
