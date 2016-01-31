@@ -53,6 +53,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class CivEvolved {
+
 	//+======+
 	//|MOD ID|
 	//+======+
@@ -63,11 +64,13 @@ public class CivEvolved {
     //|CREATIVE TABS|
     //+=============+
     public static CreativeTabs oreTab = new TabOres("oreTab");
-	//+======+
+	
+    //+======+
 	//|BLOCKS|
 	//+======+
     
     //ore
+    
     public static Block coalOre;
     public static Block copperOre;
     public static Block diamondOre;
@@ -118,6 +121,8 @@ public class CivEvolved {
     public static Item woodClub;
     //mob drops
     public static Item cowHide;
+    
+    
     //+==============+
     //|TOOL MATERIALS|
     //+==============+
