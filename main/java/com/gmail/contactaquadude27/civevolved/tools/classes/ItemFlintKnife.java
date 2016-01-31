@@ -11,6 +11,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 
 public class ItemFlintKnife extends ItemClub
 {
@@ -28,6 +29,19 @@ public class ItemFlintKnife extends ItemClub
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
 		this.itemIcon = par1IconRegister.registerIcon(Reference.MODID + ":" + getUnlocalizedName().substring(5));
+	}
+	
+	public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack){
+		return false;
+	}
+	
+	public boolean hasContainerItem(ItemStack stack){
+		return true;
+	}
+	
+	public ItemStack getContainerItem(ItemStack stack){
+		stack.setItemDamage(stack.getItemDamage() - 1);
+		return stack;
 	}
 }
 

@@ -40,6 +40,9 @@ import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTannedLeather;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTanningOil;
 import com.gmail.sharpcastle33.civevolved.items.tools.wood.ItemWoodClub;
 
 import cpw.mods.fml.common.Mod;
@@ -50,6 +53,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
@@ -122,6 +126,11 @@ public class CivEvolved {
     public static Item woodClub;
     //mob drops
     public static Item cowHide;
+    //tanning tree
+    public static Item hide;
+    public static Item tanningOil;
+    public static Item tannedLeather;
+    
     
     
     //+==============+
@@ -138,6 +147,7 @@ public class CivEvolved {
         registerBlocks();
         System.out.println("Registering Items...");
         registerItems();
+        registerRecipes();
     }
     //register blocks to GameRegistry
     public void registerBlocks(){
@@ -148,7 +158,30 @@ public class CivEvolved {
     	registerChunks();
     	registerTools();
     	registerMobDrops();
+    	registerTanningItems();
     	Materials.registerItems();
+    }
+    
+    public void registerRecipes(){
+    	registerTanningRecipes();
+    }
+    
+    public void registerTanningRecipes(){
+    	GameRegistry.addShapelessRecipe(new ItemStack(this.hide,1), new Object[]
+    	{
+    		this.cowHide, Materials.flintKnife	
+    	});
+    }
+    
+    public void registerTanningItems(){
+    	hide = new ItemHide();
+    	GameRegistry.registerItem(hide, "hide");
+    	
+    	tannedLeather = new ItemTannedLeather();
+    	GameRegistry.registerItem(tannedLeather, "tannedLeather");
+    	
+    	tanningOil = new ItemTanningOil();
+    	GameRegistry.registerItem(tanningOil, "tanningOil");
     }
     
     public void registerMobDrops(){
