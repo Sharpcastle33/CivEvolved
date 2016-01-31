@@ -40,6 +40,7 @@ import com.gmail.sharpcastle33.civevolved.items.chunks.ItemIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemLargeIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.chunks.ItemSmallIronChunk;
 import com.gmail.sharpcastle33.civevolved.items.mobdrops.ItemCowHide;
+import com.gmail.sharpcastle33.civevolved.items.tanning.ItemBuckskin;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemHide;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTannedLeather;
 import com.gmail.sharpcastle33.civevolved.items.tanning.ItemTanningOil;
@@ -130,6 +131,7 @@ public class CivEvolved {
     public static Item hide;
     public static Item tanningOil;
     public static Item tannedLeather;
+    public static Item buckskin;
     
     
     
@@ -182,6 +184,9 @@ public class CivEvolved {
     	
     	tanningOil = new ItemTanningOil();
     	GameRegistry.registerItem(tanningOil, "tanningOil");
+    	
+    	buckskin = new ItemBuckskin();
+    	GameRegistry.registerItem(buckskin, "buckskin");
     }
     
     public void registerMobDrops(){
