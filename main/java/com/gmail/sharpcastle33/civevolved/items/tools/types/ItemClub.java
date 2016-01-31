@@ -4,11 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import net.minecraft.block.Block;
-<<<<<<< HEAD
-=======
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
->>>>>>> origin/master
 import net.minecraft.item.ItemTool;
 
 public class ItemClub extends ItemTool{
