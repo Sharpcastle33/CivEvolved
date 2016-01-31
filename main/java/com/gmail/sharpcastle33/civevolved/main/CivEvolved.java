@@ -53,9 +53,8 @@ import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class CivEvolved {
+
 	//+======+
-<<<<<<< HEAD
-=======
 	//|MOD ID|
 	//+======+
     public static final String MODID = "civevolved";
@@ -65,12 +64,13 @@ public class CivEvolved {
     //|CREATIVE TABS|
     //+=============+
     public static CreativeTabs oreTab = new TabOres("oreTab");
-	//+======+
->>>>>>> origin/master
+	
+    //+======+
 	//|BLOCKS|
 	//+======+
     
     //ore
+    
     public static Block coalOre;
     public static Block copperOre;
     public static Block diamondOre;
@@ -116,16 +116,12 @@ public class CivEvolved {
     //ore chunks
     public static Item ironChunk;
     public static Item ironSmallChunk;
-<<<<<<< HEAD
     public static Item ironLargeChunk;  
-=======
-    public static Item ironLargeChunk;
     //wooden tools
     public static Item woodClub;
     //mob drops
     public static Item cowHide;
     
->>>>>>> origin/master
     
     //+==============+
     //|TOOL MATERIALS|
