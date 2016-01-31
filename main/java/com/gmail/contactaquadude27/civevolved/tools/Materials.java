@@ -12,7 +12,7 @@ public class Materials {
 	//   FLINT TOOLS        //
 	//======================//
 	
-	static Item.ToolMaterial FLINT = EnumHelper.addToolMaterial("FLINT", 0, 60, 1F, 2.0F, 14);
+	static Item.ToolMaterial FLINT = EnumHelper.addToolMaterial("FLINT", 0, 60, 1F, 1.0F, 14);
 	
 	//Items
 	public static Item flintKnife = new ItemFlintKnife(FLINT).setUnlocalizedName("flintKnife");

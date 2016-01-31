@@ -22,7 +22,7 @@ public class TabTanning extends CreativeTabs{
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 		// TODO Auto-generated method stub
-		return Item.getItemFromBlock(CivEvolved.ironOre);
+		return Item.getItemFromBlock(CivEvolved.coalGoodOre);
 	}
 
 }
