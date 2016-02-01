@@ -23,7 +23,7 @@ public class Materials {
 	// COPPER TOOLS  //  
 	//===============//  
 	//As a heads up, swords always add 4 damage to their base, I've subtracted it for you.
-	static Item.ToolMaterial POORCOPPER = EnumHelper.addToolMaterial("PCOPPER", 1, 250, 2.5F, 0.0F, 25);
+	static Item.ToolMaterial POORCOPPER = EnumHelper.addToolMaterial("PCOPPER", 1, 100, 2.5F, 0.0F, 25);
      
 	//Items
 	public static Item pcopperSword = new ItemPCopperSword(POORCOPPER).setUnlocalizedName("pcopperSword");
