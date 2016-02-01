@@ -2,9 +2,7 @@ package com.gmail.sharpcastle33.civevolved.blocks.tanning;
 
 import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -26,6 +24,19 @@ public class BlockTanningRack extends BlockContainer{
 	public TileEntity createNewTileEntity(World w, int p_149915_2_) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public boolean onBlockActivated(World w, int x, int y, int z){
+		//TODO
+		return true;
+	}
+	
+	private void dropItem(){
+		
+	}
+	
+	public TileEntity createNewTileEntity(World w){
+		return new TileTanningRack();
 	}
 
 }
