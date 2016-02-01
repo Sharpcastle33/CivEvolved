@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 public class ItemIronNeedle extends Item {
 
 	public ItemIronNeedle(){
-		this.setUnlocalizedName("civevolved_cowHide");
+		this.setUnlocalizedName("civevolved_ironNeedle");
 		this.setCreativeTab(CivEvolved.mobDropsTab);
-		this.setTextureName("civevolved:cowHide");
+		this.setTextureName("civevolved:ironNeedle");
 	}
 }

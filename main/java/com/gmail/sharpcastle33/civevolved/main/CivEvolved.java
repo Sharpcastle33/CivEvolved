@@ -82,6 +82,7 @@ public class CivEvolved {
     public static CreativeTabs oreTab = new TabOres("oreTab");
     public static CreativeTabs tanningTab = new TabTanning("tanningTab");
     public static CreativeTabs mobDropsTab = new TabMobDrops("mobDropsTab");
+    public static CreativeTabs forgingTab = new TabMobDrops("forgingTab");
 
 	
     //+======+
