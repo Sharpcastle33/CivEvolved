@@ -39,6 +39,7 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockZincOre;
 import com.gmail.sharpcastle33.civevolved.blocks.tanning.BlockTanningRack;
+import com.gmail.sharpcastle33.civevolved.blocks.tanning.TileTanningRack;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabMobDrops;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabTanning;
@@ -63,6 +64,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
@@ -128,7 +130,7 @@ public class CivEvolved {
     public static Block zincGoodOre;
     //tanning
     public static Block tanningRack;
-   
+    public static TileTanningRack tileTanningRack;
     
     
     //+=====+
@@ -197,6 +199,9 @@ public class CivEvolved {
     public void registerTanningBlocks(){
     	tanningRack = new BlockTanningRack();
     	GameRegistry.registerBlock(tanningRack, "tanningRack");
+    	
+    	tileTanningRack = new TileTanningRack();
+    	GameRegistry.registerTileEntity(TileTanningRack.class, "tileTanningRack");
     }
     
     public void registerTanningItems(){
