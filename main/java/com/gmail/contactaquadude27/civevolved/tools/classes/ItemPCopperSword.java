@@ -29,8 +29,10 @@ public class ItemPCopperSword extends ItemSword
 	{
 		this.itemIcon = par1IconRegister.registerIcon(Reference.MODID + ":" + getUnlocalizedName().substring(5));
 	}
-	
-	public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack){
+	/*
+	 * You don't need this, this gives the item functionality in the crafting grid like IC2's Forge Hammer.
+	 */
+	/*public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack){
 		return false;
 	}
 	
@@ -41,6 +43,6 @@ public class ItemPCopperSword extends ItemSword
 	public ItemStack getContainerItem(ItemStack stack){
 		stack.setItemDamage(stack.getItemDamage() - 1);
 		return stack;
-	}
+	}*/
 }
 
