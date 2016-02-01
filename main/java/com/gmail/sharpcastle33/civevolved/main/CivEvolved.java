@@ -38,6 +38,7 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockZincOre;
+import com.gmail.sharpcastle33.civevolved.blocks.tanning.BlockTanningRack;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabMobDrops;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabTanning;
@@ -125,6 +126,8 @@ public class CivEvolved {
     public static Block silverGoodOre;
     public static Block tinGoodOre;
     public static Block zincGoodOre;
+    //tanning
+    public static Block tanningRack;
    
     
     
@@ -169,6 +172,7 @@ public class CivEvolved {
     //register blocks to GameRegistry
     public void registerBlocks(){
     	registerOres();
+    	registerTanningBlocks();
     }
     //register items to GameRegistry
     public void registerItems(){
@@ -188,6 +192,11 @@ public class CivEvolved {
     	{
     		this.cowHide, Materials.flintKnife	
     	});
+    }
+    
+    public void registerTanningBlocks(){
+    	tanningRack = new BlockTanningRack();
+    	GameRegistry.registerBlock(tanningRack, "tanningRack");
     }
     
     public void registerTanningItems(){
