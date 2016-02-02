@@ -1,5 +1,7 @@
 package com.gmail.contactaquadude27.civevolved.tools;
 
+import com.gmail.contactaquadude27.civevolved.tools.classes.ItemCopperPick;
+import com.gmail.contactaquadude27.civevolved.tools.classes.ItemCopperSword;
 import com.gmail.contactaquadude27.civevolved.tools.classes.ItemFlintKnife;
 import com.gmail.contactaquadude27.civevolved.tools.classes.ItemPCopperPick;
 import com.gmail.contactaquadude27.civevolved.tools.classes.ItemPCopperSword;
@@ -23,14 +25,15 @@ public class Materials {
 	// COPPER TOOLS  //  
 	//===============//  
 	//As a heads up, swords always add 4 damage to their base, I've subtracted it for you.
-	static Item.ToolMaterial POORCOPPER = EnumHelper.addToolMaterial("PCOPPER", 1, 100, 2.5F, 0.0F, 25);
+	static Item.ToolMaterial POORCOPPER = EnumHelper.addToolMaterial("PCOPPER", 1, 100, 2.5F, 0.0F, 25); 
+	static Item.ToolMaterial COPPER = EnumHelper.addToolMaterial("COPPER", 1, 150, 2.9F, 1.5F, 30);
      
 	//Items
 	public static Item pcopperSword = new ItemPCopperSword(POORCOPPER).setUnlocalizedName("pcopperSword");
-	
-	//Items
 	public static Item pcopperPick = new ItemPCopperPick(POORCOPPER).setUnlocalizedName("pcopperPick");
 			
+    public static Item copperSword = new ItemCopperSword(COPPER).setUnlocalizedName("copperSword");
+    public static Item copperPick = new ItemCopperPick(COPPER).setUnlocalizedName("copperPick");
 	//==============//		
 	//RegisterHelper// 	
 	//=============//
@@ -38,5 +41,6 @@ public class Materials {
     	RegisterHelper.registerItem(flintKnife);
     	RegisterHelper.registerItem(pcopperSword);
     	RegisterHelper.registerItem(pcopperPick);
+    	RegisterHelper.registerItem(copperSword);
     }
 }
