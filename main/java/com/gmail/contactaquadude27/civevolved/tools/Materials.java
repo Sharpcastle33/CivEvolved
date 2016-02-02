@@ -2,7 +2,7 @@ package com.gmail.contactaquadude27.civevolved.tools;
 
 import com.gmail.contactaquadude27.civevolved.tools.classes.ItemFlintKnife;
 import com.gmail.contactaquadude27.civevolved.tools.classes.ItemPCopperPick;
-import com.gmail.contactaquadude27.civevolved.tools.classes.ItemPCopperClub;
+import com.gmail.contactaquadude27.civevolved.tools.classes.ItemPCopperSword;
 import com.gmail.contactaquadude27.civevolved.utils.RegisterHelper;
 
 import net.minecraft.item.Item;
@@ -26,7 +26,7 @@ public class Materials {
 	static Item.ToolMaterial POORCOPPER = EnumHelper.addToolMaterial("PCOPPER", 1, 100, 2.5F, 0.0F, 25);
      
 	//Items
-	public static Item pcopperSword = new ItemPCopperClub(POORCOPPER).setUnlocalizedName("pcopperSword");
+	public static Item pcopperSword = new ItemPCopperSword(POORCOPPER).setUnlocalizedName("pcopperSword");
 	
 	//Items
 	public static Item pcopperPick = new ItemPCopperPick(POORCOPPER).setUnlocalizedName("pcopperPick");
