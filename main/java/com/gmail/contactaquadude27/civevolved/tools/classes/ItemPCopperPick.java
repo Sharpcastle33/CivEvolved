@@ -10,7 +10,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemStack;
 
 public class ItemPCopperPick extends ItemPickaxe 
 {

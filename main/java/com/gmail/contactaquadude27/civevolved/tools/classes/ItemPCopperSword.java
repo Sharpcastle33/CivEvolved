@@ -9,7 +9,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
 public class ItemPCopperSword extends ItemSword
@@ -29,20 +28,5 @@ public class ItemPCopperSword extends ItemSword
 	{
 		this.itemIcon = par1IconRegister.registerIcon(Reference.MODID + ":" + getUnlocalizedName().substring(5));
 	}
-	/*
-	 * You don't need this, this gives the item functionality in the crafting grid like IC2's Forge Hammer.
-	 */
-	/*public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack){
-		return false;
-	}
-	
-	public boolean hasContainerItem(ItemStack stack){
-		return true;
-	}
-	
-	public ItemStack getContainerItem(ItemStack stack){
-		stack.setItemDamage(stack.getItemDamage() - 1);
-		return stack;
-	}*/
 }
 
