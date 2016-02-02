@@ -13,7 +13,7 @@ public class TileTanningRack extends TileEntity{
 	public ItemStack item;
 	public TileTanningRack(){
 		super();
-		allowedItems.add("cowHide");
+		allowedItems.add("item.civevolved_hide");
 	}
 	
 	public void writeToNBT(NBTTagCompound tag){
@@ -53,5 +53,10 @@ public class TileTanningRack extends TileEntity{
 		}else return false;
 	}
 	
+	public boolean isFull(){
+		if(this.item == null){
+			return false;
+		}else return true;
+	}
 	
 }

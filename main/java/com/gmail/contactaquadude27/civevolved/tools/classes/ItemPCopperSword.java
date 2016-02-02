@@ -13,6 +13,10 @@ import net.minecraft.item.ItemSword;
 
 public class ItemPCopperSword extends ItemSword
 {
+	
+	/*
+	 * Not sure we need a copper sword at this low level of quality, you probably won't be able to create a sword blade out of chunks of copper rock without any tools. like an anvil or forge.
+	 */
 	public final ToolMaterial toolMaterial;
 	static Set<Blocks> eff = new HashSet<Blocks>();
 

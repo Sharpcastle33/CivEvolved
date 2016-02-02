@@ -13,7 +13,7 @@ public class TileTanningBarrel extends TileEntity{
 	public ItemStack item;
 	public TileTanningBarrel(){
 		super();
-		allowedItems.add("cowHide");
+		allowedItems.add("hide");
 	}
 	
 	public void writeToNBT(NBTTagCompound tag){
@@ -52,6 +52,5 @@ public class TileTanningBarrel extends TileEntity{
 			return true;
 		}else return false;
 	}
-	
 	
 }
