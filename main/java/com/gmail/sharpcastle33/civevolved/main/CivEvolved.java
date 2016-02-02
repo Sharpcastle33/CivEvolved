@@ -18,6 +18,7 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodLeadOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodTinOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockGoodZincOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockIronOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLapisOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockLeadOre;
@@ -32,9 +33,13 @@ import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorLeadOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorTinOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockPoorZincOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockRedstoneOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockSilverOre;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockTinOre;
+import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockZincOre;
+import com.gmail.sharpcastle33.civevolved.blocks.tanning.BlockTanningRack;
+import com.gmail.sharpcastle33.civevolved.blocks.tanning.TileTanningRack;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabMobDrops;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabOres;
 import com.gmail.sharpcastle33.civevolved.creativetabs.TabTanning;
@@ -59,6 +64,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
@@ -76,6 +82,7 @@ public class CivEvolved {
     public static CreativeTabs oreTab = new TabOres("oreTab");
     public static CreativeTabs tanningTab = new TabTanning("tanningTab");
     public static CreativeTabs mobDropsTab = new TabMobDrops("mobDropsTab");
+    public static CreativeTabs forgingTab = new TabMobDrops("forgingTab");
 
 	
     //+======+
@@ -95,6 +102,7 @@ public class CivEvolved {
     public static Block redstoneOre;
     public static Block silverOre;
     public static Block tinOre;
+    public static Block zincOre;
     //poor ore
     public static Block coalPoorOre;
     public static Block copperPoorOre;
@@ -107,6 +115,7 @@ public class CivEvolved {
     public static Block redstonePoorOre;
     public static Block silverPoorOre;
     public static Block tinPoorOre;
+    public static Block zincPoorOre;
     //good ore
     public static Block coalGoodOre;
     public static Block copperGoodOre;
@@ -119,7 +128,10 @@ public class CivEvolved {
     public static Block redstoneGoodOre;
     public static Block silverGoodOre;
     public static Block tinGoodOre;
-   
+    public static Block zincGoodOre;
+    //tanning
+    public static Block tanningRack;
+    public static TileTanningRack tileTanningRack;
     
     
     //+=====+
@@ -163,6 +175,7 @@ public class CivEvolved {
     //register blocks to GameRegistry
     public void registerBlocks(){
     	registerOres();
+    	registerTanningBlocks();
     }
     //register items to GameRegistry
     public void registerItems(){
@@ -182,6 +195,14 @@ public class CivEvolved {
     	{
     		this.cowHide, Materials.flintKnife	
     	});
+    }
+    
+    public void registerTanningBlocks(){
+    	tanningRack = new BlockTanningRack();
+    	GameRegistry.registerBlock(tanningRack, "tanningRack");
+    	
+    	tileTanningRack = new TileTanningRack();
+    	GameRegistry.registerTileEntity(TileTanningRack.class, "tileTanningRack");
     }
     
     public void registerTanningItems(){
@@ -263,6 +284,9 @@ public class CivEvolved {
     	tinOre = new BlockTinOre();
     	GameRegistry.registerBlock(tinOre, "tinOre");
     	
+    	zincOre = new BlockZincOre();
+    	GameRegistry.registerBlock(zincOre, "zincOre");
+    	
     	//poor ores
     	
     	coalPoorOre = new BlockPoorCoalOre();
@@ -298,6 +322,9 @@ public class CivEvolved {
     	tinPoorOre = new BlockPoorTinOre();
     	GameRegistry.registerBlock(tinPoorOre, "tinPoorOre");
     	
+    	zincPoorOre = new BlockPoorZincOre();
+    	GameRegistry.registerBlock(zincPoorOre, "zincPoorOre");
+    	
     	//good ores
     	
     	coalGoodOre = new BlockGoodCoalOre();
@@ -332,5 +359,8 @@ public class CivEvolved {
     	
     	tinGoodOre = new BlockGoodTinOre();
     	GameRegistry.registerBlock(tinGoodOre, "tinGoodOre");
+    	
+    	zincGoodOre = new BlockGoodZincOre();
+    	GameRegistry.registerBlock(zincGoodOre, "zincGoodOre");
     }
 }
