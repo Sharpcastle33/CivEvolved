@@ -1,7 +1,6 @@
 package com.gmail.sharpcastle33.civevolved.blocks.ore;
 
 import java.util.Random;
-
 import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 
 import net.minecraft.block.Block;
