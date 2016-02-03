@@ -25,7 +25,7 @@ public class BlockPoorIronOre extends Block{
 		this.setHarvestLevel("pickaxe", 1);
 	
 	}
-	
+	//
 	public Item getItemDropped(int meta, Random random, int fortune){
 		return CivEvolved.ironSmallChunk;
 	}
