@@ -1,11 +1,16 @@
 package com.gmail.sharpcastle33.civevolved.blocks.tanning;
 
+import java.util.Random;
+
 import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -52,7 +57,7 @@ public class BlockTanningRack extends BlockContainer{
 		return new TileTanningRack();
 	}
 	
-	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer p){
+	public void onBlockActivated(World world, int x, int y, int z, EntityPlayer p){
 		System.out.println("tanning rack clicked!");
 		
 		if(world.isRemote){
@@ -62,29 +67,57 @@ public class BlockTanningRack extends BlockContainer{
 		
 		ItemStack hand = p.getCurrentEquippedItem();
 		TileTanningRack t = (TileTanningRack) world.getTileEntity(x, y, z);
-	if(t != null){
-		if(t.isFull()){
-			System.out.println("rack is full");
-			if(hand == null){
-				p.setCurrentItemOrArmor(0, t.getItem());
-				t.setItem(null);
-			}
-		}else{
-			System.out.println("rack isn't full");
-			if(hand != null && t.isItemValid(hand)){
-				System.out.println("item is valid");
-				if(hand.stackSize == 1){
-					System.out.println("right stack size");
-					t.setItem(hand);
-					p.setCurrentItemOrArmor(0,null);
-				}
-			}else if(hand != null){
-				System.out.println(hand.getUnlocalizedName());
-			}
+	}
+	
+	/*public void breakBlock(World world, int x, int y, int z, Block par4, int par5) {
+	    TileTanningRack te = (TileTanningRack) world.getTileEntity(x,y,z);
+	   super.breakBlock(world, x, y, z, par4, par5);
+	   for(int i = 0; i < te.getSizeInventory(); i++){
+		  ItemStack stack = te.getStackInSlot(i);
+		 // world.spawnEntityInWorld(new EntityItem(stack), x,y,z);
+	
+	 }*/
+	
+	public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetadata) {
+		TileTanningRack tileentity = (TileTanningRack) world.getTileEntity(x, y, z);
+
+		if(tileentity != null) {
+		for(int i = 0; i < tileentity.getSizeInventory(); i++) {
+		ItemStack itemstack = tileentity.getStackInSlot(i);
+		Random rand = new Random();
+
+		if(itemstack != null) {
+		float f = rand.nextFloat() * 0.8F + 0.1F;
+		float f1 = rand.nextFloat() * 0.8F + 0.1F;
+		float f2 = rand.nextFloat() * 0.8F + 0.1F;
+
+		while(itemstack.stackSize > 0) {
+		int j = rand.nextInt(21) + 10;
+
+		if(j > itemstack.stackSize) {
+		j = itemstack.stackSize;
 		}
-	}else System.out.println("t is null");
+
+		itemstack.stackSize -= j;
+
+		EntityItem item = new EntityItem(world, (double)((float)x + f), (double)((float)y + f1), (double)((float)z + f2), new ItemStack(itemstack.getItem(), j, itemstack.getItemDamage()));
+
+		if(itemstack.hasTagCompound()) {
+		item.getEntityItem().setTagCompound((NBTTagCompound)itemstack.getTagCompound().copy());
+		}
+
+		world.spawnEntityInWorld(item);
+		}
+		}
+		}
+
+		world.func_147453_f(x, y, z, oldblock);
+		}
 		
-		
+
+		super.breakBlock(world, x, y, z, oldblock, oldMetadata);
+		}
+	   
 	}
 
-}
+
