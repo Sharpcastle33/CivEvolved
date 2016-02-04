@@ -4,8 +4,6 @@ import com.gmail.sharpcastle33.civevolved.main.CivEvolved;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-
 public class BlockGoodZincOre extends Block{
 
 	//+===========+
