@@ -11,7 +11,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntity;	
 import net.minecraft.world.World;
 
 public class BlockTanningRack extends BlockContainer{
@@ -67,6 +67,34 @@ public class BlockTanningRack extends BlockContainer{
 		
 		ItemStack hand = p.getCurrentEquippedItem();
 		TileTanningRack t = (TileTanningRack) world.getTileEntity(x, y, z);
+		
+		if(hand == null){
+			if(t.getStackInSlot(0) != null){
+				if(p.inventory.addItemStackToInventory(t.getStackInSlot(0))){
+					t.decrStackSize(0, 1);
+				}else{
+					Random rand = new Random();
+					ItemStack itemstack = t.getStackInSlot(0);
+					float f = rand.nextFloat() * 0.8F + 0.1F;
+					float f1 = rand.nextFloat() * 0.8F + 0.1F;
+					float f2 = rand.nextFloat() * 0.8F + 0.1F;
+					EntityItem item = new EntityItem(world, (double)((float)x + f), (double)((float)y + f1), (double)((float)z + f2), new ItemStack(itemstack.getItem(), 1, itemstack.getItemDamage()));
+					world.spawnEntityInWorld(item);
+					t.decrStackSize(0, 1);
+				}
+			}else{
+				return;
+			}
+		}else{
+			if(t.isItemValid(hand)){
+				if(t.isFull()){
+					return;
+				}else{
+					t.setInventorySlotContents(0, hand);
+					//TODO remove item from hand
+				}
+			}
+		}
 	}
 	
 	/*public void breakBlock(World world, int x, int y, int z, Block par4, int par5) {
@@ -77,7 +105,7 @@ public class BlockTanningRack extends BlockContainer{
 		 // world.spawnEntityInWorld(new EntityItem(stack), x,y,z);
 	
 	 }*/
-	
+	//drops the items on the ground.
 	public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetadata) {
 		TileTanningRack tileentity = (TileTanningRack) world.getTileEntity(x, y, z);
 

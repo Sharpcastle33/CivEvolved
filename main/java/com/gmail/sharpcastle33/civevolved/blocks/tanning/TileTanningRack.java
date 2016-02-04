@@ -84,7 +84,9 @@ public class TileTanningRack extends TileEntity implements IInventory{
 	}
 	
 	public boolean isFull(){
-		return true;
+		if(this.getStackInSlot(0) != null){
+			return true;
+		}else return false;
 	}
 
 	@Override
