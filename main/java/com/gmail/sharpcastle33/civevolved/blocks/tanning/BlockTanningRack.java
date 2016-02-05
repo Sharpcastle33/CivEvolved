@@ -9,9 +9,10 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;	
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlockTanningRack extends BlockContainer{
@@ -102,7 +103,8 @@ public class BlockTanningRack extends BlockContainer{
 					t.setInventorySlotContents(0, hand);
 					int temp = hand.stackSize-1;
 					print(String.valueOf(temp));
-					p.setCurrentItemOrArmor(0, new ItemStack(hand.getItem(),temp));
+					Item i = hand.getItem();
+					p.setCurrentItemOrArmor(0, new ItemStack(i,temp));
 					if(hand.stackSize-1 <= 0){
 						p.setCurrentItemOrArmor(0, null);
 					}
