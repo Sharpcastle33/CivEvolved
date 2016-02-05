@@ -100,8 +100,8 @@ public class BlockTanningRack extends BlockContainer{
 					return;
 				}else{
 					print("rack not full");
-					t.setInventorySlotContents(0, hand);
 					int temp = hand.stackSize-1;
+					t.setInventorySlotContents(0, hand);
 					print(String.valueOf(temp));
 					Item i = hand.getItem();
 					p.setCurrentItemOrArmor(0, new ItemStack(i,temp));
