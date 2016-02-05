@@ -27,6 +27,10 @@ public class BlockTanningRack extends BlockContainer{
 		this.isActive = false;
 	}
 	
+	public void print(String s){
+		System.out.println(s);
+	}
+	
 	@Override
 	public TileEntity createNewTileEntity(World w, int p_149915_2_) {
 		// TODO Auto-generated method stub
@@ -57,7 +61,7 @@ public class BlockTanningRack extends BlockContainer{
 		return new TileTanningRack();
 	}
 	
-	public void onBlockActivated(World world, int x, int y, int z, EntityPlayer p){
+	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer p){
 		System.out.println("tanning rack clicked!");
 		
 		if(world.isRemote){
@@ -69,7 +73,9 @@ public class BlockTanningRack extends BlockContainer{
 		TileTanningRack t = (TileTanningRack) world.getTileEntity(x, y, z);
 		
 		if(hand == null){
+			print("no item in hand");
 			if(t.getStackInSlot(0) != null){
+				print("given item");
 				if(p.inventory.addItemStackToInventory(t.getStackInSlot(0))){
 					t.decrStackSize(0, 1);
 				}else{
@@ -85,12 +91,21 @@ public class BlockTanningRack extends BlockContainer{
 			}else{
 				return;
 			}
-		}else{
+		}else{ //bug, you can put in more than allowed amount.
+			print("item in hand");
 			if(t.isItemValid(hand)){
+				print("item valid");
 				if(t.isFull()){
 					return;
 				}else{
+					print("rack not full");
 					t.setInventorySlotContents(0, hand);
+					int temp = hand.stackSize-1;
+					print(String.valueOf(temp));
+					p.setCurrentItemOrArmor(0, new ItemStack(hand.getItem(),temp));
+					if(hand.stackSize-1 <= 0){
+						p.setCurrentItemOrArmor(0, null);
+					}
 					//TODO remove item from hand
 				}
 			}
