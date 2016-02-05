@@ -1,6 +1,6 @@
 package com.gmail.sharpcastle33.civevolved.main;
 
-import com.gmail.contactaquadude27.civevolved.items.ingots.ModItems;
+import com.gmail.contactaquadude27.civevolved.items.ModItems;
 import com.gmail.contactaquadude27.civevolved.tools.Materials;
 import com.gmail.contactaquadude27.civevolved.utils.Reference;
 import com.gmail.sharpcastle33.civevolved.blocks.ore.BlockCoalOre;
