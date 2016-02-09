@@ -13,6 +13,7 @@ public class ModItems {
 	public static Item zincIngot = new ItemCE("zincIngot");
 	public static Item tinIngot = new ItemCE("tinIngot");
 	public static Item leadIngot = new ItemCE("leadIngot");
+	public static Item steelIngot = new ItemCE("steelIngot");
 	
 	//
 	
@@ -24,6 +25,7 @@ public class ModItems {
      RegisterHelper.registerItem(zincIngot);
      RegisterHelper.registerItem(tinIngot);
      RegisterHelper.registerItem(leadIngot);
+     RegisterHelper.registerItem(steelIngot);
     }
 
 
